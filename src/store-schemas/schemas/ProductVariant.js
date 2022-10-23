@@ -1,6 +1,5 @@
 const { Schema } = require("mongoose");
 const ProductOption = require("./ProductOption");
-const archiveShopifyProductSyncJob = require("../middlewares/archiveShopifyProductSyncJob");
 
 const ProductVariant = new Schema({
   title: {
