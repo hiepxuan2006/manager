@@ -9,7 +9,9 @@ const PORT = process.env.PORT || 3000;
 // body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.get("/", (req, res) => {
+  res.send("hello word");
+});
 setTimeout(async () => {
   await require("./connection/db").connectDB();
   await require("./connection/redisConnection").connectRedis();
